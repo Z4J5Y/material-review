@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>材料导论 · 知识点手册</title>
+<style>
+:root{--ink:#1b2432;--sub:#5d6b80;--line:#e3e8f0;--brand:#2f6df6;--bg:#f6f8fc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+ font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;background:#fff;padding:38px 44px 60px;box-shadow:0 1px 3px rgba(20,40,80,.08)}
+h1{font-size:28px;margin:0 0 6px;letter-spacing:.5px}
+h2{font-size:21px;margin:38px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line);color:#16233a}
+h3{font-size:17px;margin:26px 0 8px;color:#1d2c45}
+h4{font-size:15.5px;margin:18px 0 6px;color:#2b3a52}
+p{margin:8px 0}
+strong{color:#10203a}
+code{background:#f1f4fa;border-radius:5px;padding:1px 5px;font-size:.92em;
+ font-family:"JetBrains Mono",Consolas,monospace;color:#2b4a7d}
+blockquote{margin:12px 0;padding:10px 16px;background:#eef4ff;border-left:4px solid var(--brand);
+ border-radius:0 8px 8px 0;color:#28405f}
+blockquote strong{color:#1c3f77}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f2f6fd;font-weight:700;color:#20395c;white-space:nowrap}
+tbody tr:nth-child(even){background:#fbfcfe}
+ul,ol{margin:8px 0 8px 4px;padding-left:22px}
+li{margin:4px 0}
+hr{border:none;border-top:1px dashed #cfd8e6;margin:26px 0}
+@media (max-width:640px){
+  .page{padding:20px 16px 40px}
+  body{font-size:15px}
+  h1{font-size:23px}
+  h2{font-size:19px}
+  table{font-size:13px}
+  th,td{padding:6px 7px}
+}
+@media print{
+  body{background:#fff;font-size:11.5pt}
+  .page{box-shadow:none;max-width:none;padding:0}
+  h2{page-break-after:avoid}
+  table{page-break-inside:avoid;font-size:10pt}
+  tr{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<h1>材料导论 · 知识点手册</h1>
+<blockquote>《新材料与加工技术导论》期末复习 · 依据课程课件（程方杰 教授，2026 秋）整理</blockquote>
+<blockquote>适用题型：选择题 · 判断题 · 简答题 · 综合分析</blockquote>
+<blockquote>配套工具：<code>材料导论刷题工具.html</code>（232 题，含选择题 96 / 判断题 80 / 简答题 40 / 综合分析 16）</blockquote>
+<hr>
+<h2>0. 复习总纲：一条主线、两类问题、三个层次</h2>
+<p><strong>一条主线（全书灵魂）</strong></p>
+<blockquote><strong>成分 + 工艺 → 结构（相 + 组织）→ 性能 → 服役表现</strong></blockquote>
+<p>任何一道简答题、综合分析题，都可以套用这条链路作答：先说材料成分，再说加工工艺，再推组织，再推性能，最后落到服役与失效。</p>
+<p><strong>两类问题</strong></p>
+<ul>
+<li>「是什么」：定义、分类、牌号、工序名称、数字（如 727 ℃、0.77 %C、Cr ≥ 12.8 %）。</li>
+<li>「为什么」：结构决定性能、工艺决定组织、缺陷决定失效。</li>
+</ul>
+<p><strong>三个层次</strong></p>
+<ol>
+<li>结构层次：原子/分子 → 晶格 → 相 → 组织 → 性能（尺度从几分之一纳米到数十米）。</li>
+<li>材料层次：金属 / 无机非金属 / 高分子 / 复合材料。</li>
+<li>工艺层次：热加工（铸、锻、焊、增材、粉末冶金）+ 冷加工（车铣刨磨钻）。</li>
+</ol>
+<p><strong>考试策略</strong></p>
+<ul>
+<li>选择题、判断题：抓「数字、定义、对应关系」，本手册的表格就是为此准备的。</li>
+<li>简答题：按「定义 + 分类/特点 + 举例」三段式，<strong>分点作答</strong>，关键词优先。</li>
+<li>综合分析：按「现象 → 原理（成分/工艺/组织）→ 措施 → 检验/结论」四段式，务必落到工程。</li>
+</ul>
+<hr>
+<h2>第 1 章 绪论：材料的基本属性与发展史</h2>
+<h3>1.1 材料是什么</h3>
+<ul>
+<li><strong>材料定义（工程科学角度）</strong>：材料是<strong>被赋能的物质</strong>。人类通过分离、提纯、合成、改性等操作，赋予物质某种功能与性能，物质才成为材料。</li>
+<li><strong>元素—物质—材料</strong>：天然存在于地球上的化学元素只有 <strong>92 种</strong>；有限的元素通过不同组合与存在形态构成物质世界。</li>
+<li><strong>三大支柱</strong>：<strong>材料、能源、信息</strong> 是现代社会的三大支柱，而<strong>加工制造技术</strong>是支撑现代社会运转的基础。</li>
+<li><strong>双刃剑</strong>：材料的大规模生产与消费带来便利，也造成环境污染、垃圾围城，因此课程单列「材料消费与可持续发展」。</li>
+</ul>
+<h3>1.2 结构层次与表征工具（必背表）</h3>
+<table><thead><tr><th>层次</th><th>尺度</th><th>主角</th><th>表征工具</th></tr></thead><tbody>
+<tr><td>原子/分子</td><td>几分之一纳米</td><td>元素与结合键</td><td>元素周期表</td></tr>
+<tr><td>晶格</td><td>几分之一纳米</td><td>晶格与晶胞</td><td>X 射线衍射 XRD</td></tr>
+<tr><td>相</td><td>百纳米~百微米</td><td>固溶体、化合物</td><td>相图、热分析（DSC）</td></tr>
+<tr><td>微观组织</td><td>数微米~毫米</td><td>晶粒、相的形态</td><td>金相显微镜（OM/SEM）</td></tr>
+<tr><td>宏观性能</td><td>数厘米~数十米</td><td>力学性能</td><td>拉伸/硬度试验</td></tr>
+</tbody></table>
+<h3>1.3 常见晶体结构（高频选择/判断题）</h3>
+<table><thead><tr><th>结构类型</th><th>结合键</th><th>典型材料</th></tr></thead><tbody>
+<tr><td>体心立方 BCC</td><td>金属键</td><td>Cr、V、α-Fe、W</td></tr>
+<tr><td>面心立方 FCC</td><td>金属键</td><td>Cu、Ni、Au、γ-Fe、Al</td></tr>
+<tr><td>密排六方 HCP</td><td>金属键</td><td>Mg、Zn、α-Ti、Co、Zr</td></tr>
+<tr><td>金刚石型</td><td>共价键（正四面体骨架）</td><td>金刚石、Si、Ge</td></tr>
+<tr><td>石墨型（层状）</td><td>层内共价键强、层间弱</td><td>石墨、六方氮化硼 h-BN</td></tr>
+<tr><td>NaCl 型</td><td>离子键</td><td>食盐、MgO、TiN</td></tr>
+</tbody></table>
+<blockquote>记忆：<strong>FCC 软（Cu、Al、Au 塑性好）；HCP 少滑移系（Mg、Zn 难变形）；BCC 有低温脆性转变（铁）</strong>。</blockquote>
+<h3>1.4 相与组织（最易混，必考）</h3>
+<ul>
+<li><strong>相</strong>：成分、结构均匀，且与周围有界面分开的一块物质。</li>
+<li>固溶体：溶质原子挤进溶剂晶格，如 Mn 溶入 Fe。</li>
+<li>化合物：按固定比例结成新格子，如渗碳体 Fe₃C。</li>
+<li><strong>组织</strong>：显微镜下看到的东西 = <strong>相的种类 + 数量 + 大小 + 形状 + 分布</strong>。</li>
+<li>典型例子：</li>
+<li><strong>珠光体 P</strong>：铁素体与渗碳体交替的<strong>层片状</strong>共析产物（退火态钢的主体，硬度约 HB200）。</li>
+<li><strong>马氏体 M</strong>：淬火时被「冻结」的<strong>过饱和固溶体</strong>（硬而脆，可达 HRC60+）。</li>
+<li><strong>同一钢块，不同工艺 → 不同组织 → 不同性能</strong>：退火（珠光体，软、好切削）→ 淬火（马氏体，硬耐磨）→ 回火（硬度与韧性重新分配）。</li>
+<li><strong>相图</strong>：横轴成分、纵轴温度的「相」分布地图。</li>
+</ul>
+<h3>1.5 性能提升的三条路径</h3>
+<ol>
+<li><strong>改成分</strong>：合金化（加 C、Mn、Cr、Ni 等）。</li>
+<li><strong>改工艺</strong>：热处理、塑性加工、焊接等。</li>
+<li><strong>改尺度</strong>：<strong>细化晶粒——唯一能同时提高强度与韧性</strong>的途径。</li>
+</ol>
+<h3>1.6 材料分类</h3>
+<ul>
+<li>按化学键/组成：金属材料、无机非金属材料（陶瓷、玻璃、水泥）、高分子材料、复合材料。</li>
+<li>按用途：结构材料、功能材料。</li>
+<li>按状态：单晶、多晶、非晶（玻璃）、薄膜、纤维、粉体。</li>
+</ul>
+<h3>1.7 材料史时间轴（简答题常用）</h3>
+<table><thead><tr><th>阶段</th><th>时间</th><th>标志性材料与工艺</th></tr></thead><tbody>
+<tr><td>旧石器时代</td><td>约 250 万年前</td><td>石头 + <strong>打制</strong>（以石砸石）；人类 99 % 的时间用石头</td></tr>
+<tr><td>新石器时代</td><td>约 1~2 万年前</td><td><strong>陶器</strong>（火灾启示说）、磨制石器、<strong>弓箭</strong>（约 5~1 万年前）</td></tr>
+<tr><td>青铜器时代</td><td>约公元前 6000 年</td><td>人类<strong>第一次材料大交替</strong>，铸造与合金化</td></tr>
+<tr><td>铁器时代</td><td>约公元前 1000 年起</td><td>铁器普及，钢铁成为主力</td></tr>
+<tr><td>多材料时代</td><td>近 300 年</td><td>钢铁、水泥、玻璃、高分子、复合材料、功能材料、纳米材料、硅基信息材料</td></tr>
+</tbody></table>
+<ul>
+<li><strong>陶与瓷</strong>：陶器出现约 1.3 万年前；<strong>瓷器出现于商末、成熟于东汉末年</strong>（历时约 1800 年）；从南方青瓷到隋唐北方白瓷只用约 400 年。宋代五大名窑：<strong>定、汝、官、哥、钧</strong>；元代景德镇「瓷石 + 高岭土」二元配方，烧出元青花。</li>
+<li><strong>青铜</strong>：伊朗铜羊（约 6000 年前）、埃及国王铜像（BC1000）；合金化是金属结构材料发展的基本思路。</li>
+<li><strong>第一个全合成材料</strong>：<strong>酚醛树脂</strong>（苯酚 + 甲醛），从此有了以烃类化合物为主体的高分子材料家族。</li>
+<li><strong>锰钢与硅钢</strong>：开启合金钢时代（高铁无缝钢轨、电力变压器硅钢片）。</li>
+<li><strong>不锈钢</strong>：1912 年英国冶金学家<strong>布雷尔利</strong>（Brearley）研究枪管钢时发现含铬 <strong>12.8 %</strong> 的试样不锈；几乎同时美国、德国也有发现；1924 年哈特菲尔德发明奥氏体不锈钢。四大类：奥氏体、铁素体、双相、马氏体。</li>
+<li><strong>硬铝</strong>：偶然发现的时效硬化铝合金（航空起源）。</li>
+<li><strong>永磁材料</strong>：从钢厂垃圾—氧化铁皮发展出的铁氧体永磁，性价比最高。</li>
+<li><strong>尼龙</strong>：学名聚酰胺 PA，杜邦公司<strong>卡罗塞斯</strong>开发，<strong>己二胺 + 己二酸</strong>缩聚得尼龙 66；英国同行用芳香族羧酸 + 二元醇缩聚于 1940 年合成<strong>涤纶</strong>（聚酯纤维）。</li>
+<li><strong>复合材料</strong>：20 世纪 30 年代，块体玻璃拉成丝后强度大幅提高，热固性聚酯、环氧树脂商业化，<strong>玻璃纤维增强聚酯（GFRP）</strong> 屈服强度达 <strong>300 MPa</strong>，超过当时主流低碳钢。</li>
+</ul>
+<h3>1.8 关键分析技术（高频）</h3>
+<table><thead><tr><th>技术</th><th>时间/人物</th><th>用途</th></tr></thead><tbody>
+<tr><td>光学显微镜 OM</td><td>1660 年胡克（40~140 倍）；<strong>1863 年索氏</strong>观察抛光腐蚀钢试片，标志光学金相学诞生</td><td>观察微观组织</td></tr>
+<tr><td>X 射线衍射 XRD</td><td><strong>1912 年劳厄</strong>发现衍射；<strong>布拉格父子</strong>提出布拉格公式</td><td>晶体结构、物相、元素含量；衍生 EPMA、EBSD、SEM、TEM</td></tr>
+<tr><td>相图 + 热分析</td><td>DTA、DTG、DSC、TMA、DMA</td><td>测相变温度与临界点，指导热处理</td></tr>
+<tr><td>碳-14 测年</td><td><strong>1949 年利比</strong>（芝加哥大学）</td><td>文物年代测定，需年轮法修正</td></tr>
+<tr><td>拉伸/硬度</td><td>—</td><td>宏观力学性能</td></tr>
+</tbody></table>
+<blockquote>口诀：<strong>看组织用 OM，看结构用 XRD，看相变用 DSC，看年代用 C-14。</strong></blockquote>
+<hr>
+<h2>第 2 章 金属材料</h2>
+<h3>2.1 Fe-Fe₃C 相图（全章核心，必考）</h3>
+<ul>
+<li>横轴含碳量 <strong>0~6.69 %</strong>，纵轴温度。</li>
+<li><strong>三条特征水平线</strong>：</li>
+</ul>
+<table><thead><tr><th>线</th><th>温度</th><th>反应</th><th>含义</th></tr></thead><tbody>
+<tr><td>HJB</td><td><strong>1495 ℃</strong></td><td>包晶</td><td>δ + L → γ</td></tr>
+<tr><td>ECF</td><td><strong>1148 ℃</strong></td><td>共晶</td><td>L → γ + Fe₃C（莱氏体）</td></tr>
+<tr><td>PSK（A₁）</td><td><strong>727 ℃</strong></td><td>共析</td><td>γ → α + Fe₃C（<strong>珠光体</strong>）</td></tr>
+</tbody></table>
+<ul>
+<li><strong>三个特征点</strong>：</li>
+<li><strong>S 点</strong>：0.77 %C、727 ℃（共析点，得珠光体）。</li>
+<li><strong>C 点</strong>：4.30 %C、1148 ℃（共晶点）。</li>
+<li><strong>E 点</strong>：<strong>2.11 %C</strong>（钢与铸铁的分界）。</li>
+<li>规律：<strong>含碳量升高 → 渗碳体比例增大 → 强度硬度升高、塑性韧性下降</strong>。</li>
+<li>用途：制定退火、正火、淬火、回火工艺的依据。</li>
+</ul>
+<h3>2.2 钢中的五种基本相（必背）</h3>
+<table><thead><tr><th>名称</th><th>符号</th><th>结构与成分</th><th>性能与作用</th></tr></thead><tbody>
+<tr><td>铁素体</td><td>F</td><td>碳在 α-Fe 中的间隙固溶体，BCC，含碳 ≤0.0218 %</td><td>软、塑性极好、无磁；热变形与渗碳的载体</td></tr>
+<tr><td>奥氏体</td><td>A</td><td>碳在 γ-Fe 中的间隙固溶体，FCC，&gt;727 ℃</td><td>高温相，塑性好，热加工与热处理的起始组织</td></tr>
+<tr><td>渗碳体</td><td>Fe₃C</td><td>铁碳化合物，含碳 6.69 %，斜方晶格</td><td>硬而脆（约 800 HB），钢的「骨架」与「刀刃」</td></tr>
+<tr><td>珠光体</td><td>P</td><td>铁素体 + 渗碳体层片交替（共析产物）</td><td>强度与韧性搭配适中，退火态钢主体</td></tr>
+<tr><td>马氏体</td><td>M</td><td>淬火冻结的过饱和固溶体</td><td>最硬最脆（HRC60+），必须回火使用</td></tr>
+</tbody></table>
+<h3>2.3 钢铁的分类</h3>
+<ul>
+<li><strong>按化学成分</strong>：碳素钢（低碳 ≤0.25 %C、中碳 0.25~0.60 %、高碳 &gt;0.60 %）；合金钢（低合金 &lt;5 %、中合金 5~10 %、高合金 &gt;10 % 合金元素总量）。</li>
+<li><strong>按冶炼与脱氧</strong>：普通质量钢/优质钢/高级优质钢（按 S、P 控制）；<strong>沸腾钢</strong>（脱氧不完全、成本低、偏析大）与<strong>镇静钢</strong>（完全脱氧、组织致密、性能均匀、重要构件用）。</li>
+<li><strong>按用途</strong>：结构钢（用量最大）、工具钢（高硬度高耐磨）、特殊用途钢（不锈钢、耐热钢、耐磨钢、电工钢）。</li>
+</ul>
+<h3>2.4 性能与四大金属对比</h3>
+<ul>
+<li>钢：强度-韧性可调范围极大（200~2000 MPa）；可铸可锻可焊可切削、产业链最完整；资源丰富、可 100 % 回收；短板是密度大（7.85 g/cm³）、易腐蚀、不耐超高温。</li>
+<li><strong>比强度 = 强度 ÷ 密度</strong>（轻量化第一指标，钛、铝占优）。</li>
+<li>2025 年数据：全球粗钢 <strong>18.49 亿吨</strong>（−2.0 %），中国 <strong>9.61 亿吨</strong>（占 52.0 %，多年来第一）；印度 1.65 亿吨（+10.4 %）；全球电炉钢比 30.3 %、连铸比 97.4 %；人均成品钢材表观消费中国 562 kg、韩国 844 kg（第一）、印度 109 kg。</li>
+</ul>
+<table><thead><tr><th>材料</th><th>密度 g/cm³</th><th>关键性能</th><th>典型应用</th></tr></thead><tbody>
+<tr><td>钢</td><td>7.85</td><td>强度 300~2000 MPa，价格基准 1</td><td>建筑、汽车、桥梁、管线</td></tr>
+<tr><td>铜</td><td>8.96</td><td>电导率仅次于银（IACS 100 %），FCC 塑性好，耐蚀抑菌</td><td>电缆、电机绕组、引线框架；纯电动车单车用铜 80~100 kg</td></tr>
+<tr><td>铝</td><td>2.70</td><td>电导率约铜 61 %，无低温脆性，可挤压复杂截面，再生铝能耗仅原铝 5 %</td><td>门窗幕墙、汽车轻量化、电池托盘</td></tr>
+<tr><td>钛</td><td>4.51</td><td><strong>比强度金属中最高</strong>，钝化膜极耐蚀，生物相容</td><td>航空压气机、人工关节、海水管路</td></tr>
+<tr><td>镍基合金</td><td>8.9</td><td>&gt;50 % Ni，600 ℃ 以上仍高强，抗氧化抗蠕变抗热腐蚀</td><td>航空发动机涡轮叶片、油气深井管</td></tr>
+</tbody></table>
+<ul>
+<li><strong>铜合金</strong>：黄铜（Cu-Zn）、青铜（Cu-Sn）、白铜（Cu-Ni）。</li>
+<li><strong>不锈钢</strong>：w(Cr) ≥ <strong>12.8 %</strong>，靠致密 Cr₂O₃ 钝化膜；膜可自愈，但氯离子环境会点蚀与应力腐蚀。四大类中双相钢增速最快（+23.6 %）。选型三问：<strong>介质（氯离子）→ 温度与应力 → 是否焊接成形</strong>。</li>
+<li><strong>镍基高温合金</strong>：占航空发动机重量 40 %~60 %；强化机制为固溶强化（Inconel 625）与 <strong>γ′/γ″ 沉淀强化（GH4169）</strong>；叶片组织演变 <strong>等轴晶 → 定向柱晶 → 单晶</strong>；变形合金约占 75 %。</li>
+<li><strong>钛</strong>：工业纯钛 TA1/TA2、α+β 型 <strong>TC4（Ti-6Al-4V）</strong>；Kroll 法提炼（流程长、能耗高、批次间歇、易污染）是昂贵主因；2025 年中国海绵钛 28.1 万吨（全球 72.6 %）、钛材 18.3 万吨（68 %），但航空航天仅约 20 %（欧美 &gt;50 %）。</li>
+</ul>
+<h3>2.5 钢铁生产全流程（简答必背）</h3>
+<ol>
+<li><strong>采矿选矿</strong>：磁铁矿 Fe₃O₄、赤铁矿 Fe₂O₃、褐铁矿 Fe₂O₃·3H₂O、菱铁矿 FeCO₃ → 破碎、选矿得精矿粉。</li>
+<li><strong>烧结</strong>：矿粉 + 溶剂 + 燃料 + 水 → 多孔块矿（保证高炉透气性）。</li>
+<li><strong>炼焦</strong>：多种煤混合炭化 → 焦炭（接近纯碳）；<strong>95 % 以上</strong>钢铁生产仍用 300 年前 <strong>Darby</strong> 发明的焦炭炼铁法。</li>
+<li><strong>高炉炼铁</strong>：铁矿 + 焦炭 + 石灰石高温还原 → 生铁（铁水）。</li>
+<li><strong>铁水预处理</strong>：脱硫、扒渣。</li>
+<li><strong>炼钢</strong>：<strong>转炉</strong>（铁水 + 10~15 % 废钢，吹氧氧化 C、Si、Mn，靠铁水自身热量，不加燃料）；<strong>电炉</strong>（废钢 + 电能）。</li>
+<li><strong>炉外精炼（二次精炼）</strong>：惰性/还原气氛中脱气、脱氧、脱硫、去夹杂。</li>
+<li><strong>连铸</strong>：钢水连续浇成坯（已基本取代铸锭，仅大型铸件仍用钢锭）。</li>
+<li><strong>热成形</strong>：铸造、锻造、<strong>轧制（占塑性加工 90 % 以上）</strong>、焊接；再机械加工与防护（热镀锌等）。</li>
+</ol>
+<blockquote>记忆链：<strong>矿 → 烧 → 焦 → 铁 → 预 → 钢 → 精 → 铸 → 形 → 机加 → 防护</strong>。</blockquote>
+<h3>2.6 加工与防护</h3>
+<ul>
+<li><strong>铸造</strong>：金属液态成形，最早的金属热加工工艺；流程为液体金属 → 充型 → 凝固收缩。</li>
+<li><strong>锻造</strong>：8 万吨级锻压机（世界最大）。</li>
+<li><strong>轧制</strong>：坯料通过旋转轧辊间隙受压变形；<strong>冷轧在再结晶温度以下、热轧在以上</strong>；<strong>TMCP</strong>（控轧控冷）通过控制加热温度、轧制过程与冷却条件提高强韧性；无缝钢管的<strong>斜轧法（Mannesmann 法）</strong>：斜轧辊穿孔 + 芯棒延伸。</li>
+<li><strong>焊接</strong>：加热/高温/高压连接金属，分熔焊、压焊、钎焊；焊接机器人是高度自动化标志。</li>
+<li><strong>机械加工</strong>：车、铣、刨、磨、钻；数控（CNC）源于航空复杂型面零件需求。</li>
+<li><strong>腐蚀与防护</strong>：化学腐蚀与电化学腐蚀，本质都是金属原子氧化为阳离子；锈蚀最常见；措施有热镀锌、涂装、阴极保护等。</li>
+</ul>
+<h3>2.7 先进金属材料清单（选择题素材）</h3>
+<p>高温合金（&gt;600 ℃，镍/钴/铌硅）、锆合金（核燃料包壳）、钽铌合金（耐蚀/电容）、<strong>硬质合金</strong>（WC/TiC + Co/Ni/Mo，粉末冶金，刀具模具）、<strong>储氢合金</strong>（镧镍合金 LaNi₅，氢以原子形式储于晶格空隙）、生物医用合金、<strong>形状记忆合金</strong>（NiTi，热弹性马氏体相变及其逆相变；阿波罗 11 号天线）、金属磁性材料（<strong>钕铁硼 Nd₂Fe₁₄B</strong>，可吸起自重 640 倍）、金属薄膜（集成电路互连，铝 → 铜）、<strong>泡沫金属</strong>（1948 年 SoSnik 制得泡沫铝）、<strong>非晶合金/金属玻璃</strong>（快速凝固，高强度高硬度高耐磨）、<strong>超导材料</strong>（电阻为零、排斥磁力线）、<strong>高熵合金</strong>（五种以上等量元素）、金属基复合材料（MMC）、<strong>梯度功能材料 FGM</strong>（1984 年日本新野正之提出，性能沿厚度方向连续变化，适合两侧温差大的环境）。</p>
+<h3>2.8 金属材料制备新工艺</h3>
+<table><thead><tr><th>工艺</th><th>要点</th></tr></thead><tbody>
+<tr><td>连续铸轧 CCR</td><td>钢水直接浇入轧辊辊缝，跳过连铸与粗轧，从钢水直接出薄板（无锭轧制）；1857 年 Bessemer 提出二辊铸轧设想，20 世纪 30/50 年代在有色与钢铁上工业化</td></tr>
+<tr><td>半固态成形 SSM</td><td>20 世纪 70 年代初 MIT <strong>Flemings</strong> 提出；凝固中搅拌打碎枝晶，得低黏度糊态；结合铸造与锻造优势，净成形、低能耗</td></tr>
+<tr><td>金属注射成形 MIM</td><td>1973 年 <strong>Parmatech</strong> 发明；粉末 + 有机粘结剂混练 → 注射 → 脱脂 → 烧结，适合小型复杂件</td></tr>
+<tr><td>3D 打印（增材制造）</td><td>美国 MIT 提出；三维模型切片后逐层堆积，无需模具，适合小批量与复杂结构</td></tr>
+</tbody></table>
+<hr>
+<h2>第 3 章 有机高分子材料</h2>
+<h3>3.1 六大通用塑料（必背表）</h3>
+<table><thead><tr><th>品种</th><th>关键性质</th><th>典型用途</th></tr></thead><tbody>
+<tr><td><strong>PE</strong> 聚乙烯</td><td>HDPE 熔点约 <strong>125 ℃</strong>、刚性较好；LDPE 耐热性差（超过 110 ℃ 不行）、柔软透明</td><td>HDPE：不透明容器、塑料袋、燃气管、土工膜；LDPE：保鲜膜、农膜、透气膜、易撕膜</td></tr>
+<tr><td><strong>PP</strong> 聚丙烯</td><td>熔点约 <strong>165 ℃</strong>，耐热、耐腐蚀、强度刚性高于 PE，密度小（约 0.90）</td><td>汽车保险杠、PPR 水管、BOPP 电容膜、玩具</td></tr>
+<tr><td><strong>PS</strong> 聚苯乙烯</td><td>强度高、透明度高但<strong>脆</strong>；发泡后（EPS）质轻</td><td>透明制品、包装；EPS 缓冲与保温</td></tr>
+<tr><td><strong>PET</strong> 聚对苯二甲酸乙二醇酯</td><td>强度高、透明、阻隔性好、可回收</td><td>饮料瓶、薄膜、涤纶纤维</td></tr>
+<tr><td><strong>PVC</strong> 聚氯乙烯</td><td>强度高、耐腐蚀、阻燃；含<strong>增塑剂可能有毒</strong></td><td>管材、型材、电缆护套、血袋（特殊医疗）</td></tr>
+<tr><td><strong>PC</strong> 聚碳酸酯</td><td>透明、抗冲击、耐热</td><td>灯罩、防护面罩、电子外壳、防弹玻璃</td></tr>
+</tbody></table>
+<blockquote>易错：<strong>PVC 一般不做食品容器</strong>；<strong>PS 脆</strong>；<strong>HDPE 熔点 125 ℃、PP 165 ℃</strong> 别记反。</blockquote>
+<h3>3.2 从单体到制品：三段式</h3>
+<ol>
+<li><strong>单体生产</strong>：原油常压/减压蒸馏切分馏分——室温~200 ℃ 汽油馏分（石脑油）、200~350 ℃ 煤柴油馏分、350~500 ℃ 减压馏分/润滑油、&gt;500 ℃ 减压渣油。</li>
+<li><strong>单体聚合</strong>：以 PVC 为例，氯乙烯单体 + 过氧化物/偶氮类引发剂 → <strong>自由基聚合</strong> → 聚氯乙烯。</li>
+<li><strong>工业化生产</strong>：原料精制 → 聚合 → 后处理（过滤、水洗、干燥、均化）→ <strong>造粒</strong>（加稳定剂制成均匀颗粒；方式有流化床喷雾造粒、熔融挤出切断造粒、挤出造粒、反应造粒）→ 包装。</li>
+</ol>
+<h3>3.3 塑料成型方法（简答高频）</h3>
+<table><thead><tr><th>方法</th><th>原理</th><th>典型制品</th></tr></thead><tbody>
+<tr><td>挤出成型</td><td>熔体连续通过口模，冷却定型</td><td>管材、型材、板材、片材、薄膜、电缆包覆、单丝</td></tr>
+<tr><td>吹塑成型</td><td>型坯放入模具吹入压缩空气贴模</td><td>中空瓶、桶、油箱</td></tr>
+<tr><td>注塑成型</td><td>熔体高压注入闭合模腔，冷却顶出</td><td>复杂精密件、大批量（外壳、齿轮）</td></tr>
+<tr><td>模压成型</td><td>坯料入模加热加压</td><td>热固性塑料、橡胶密封件</td></tr>
+<tr><td>其他</td><td>压延、流延、滚塑、热成型、3D 打印</td><td>PVC 片材、保鲜膜、大型中空件</td></tr>
+</tbody></table>
+<ul>
+<li><strong>制品后处理</strong>：退火消除内应力、调湿稳定尺寸、去除挥发物、机械加工与装饰。</li>
+<li><strong>热塑性 vs 热固性</strong>：热塑性（PE、PP、PS、PVC、PET、PC）可反复加热软化；热固性（酚醛、环氧、不饱和聚酯）交联后不熔不溶、不可逆。</li>
+</ul>
+<h3>3.4 橡胶</h3>
+<ul>
+<li><strong>定义</strong>：具有<strong>高弹性</strong>的高分子材料，<strong>玻璃化转变温度低于使用温度</strong>，受力可大变形、卸力能恢复。</li>
+<li><strong>分类</strong>：</li>
+<li>按来源：天然橡胶、合成橡胶。</li>
+<li>按用途：通用橡胶、特种橡胶。</li>
+<li>按交联性：<strong>热塑性橡胶（TPE）</strong>、<strong>硫化橡胶</strong>。</li>
+<li><strong>天然橡胶制取</strong>：三叶橡胶树割胶 → 胶乳收集（加氨保存）→ 加醋酸凝固 → 压片、洗涤、脱水、干燥。</li>
+<li><strong>合成橡胶</strong>：以丁二烯、苯乙烯、异戊二烯等为单体，溶液聚合或乳液聚合。</li>
+<li><strong>通用合成橡胶</strong>：丁苯胶、顺丁胶、异戊胶、丁腈胶（耐油）、氯丁胶、丁基胶（气密性好，内胎）、乙丙胶、三元乙丙胶。</li>
+<li><strong>特种橡胶</strong>：硅橡胶（宽温域）、氟橡胶（主链饱和碳链 + 大量 C—F 键，180 ℃ 长期工作，耐化学）、聚氨酯橡胶。</li>
+<li><strong>硫化（简答必考）</strong>：线型大分子 → 交联成三维网状（体型）结构。性能变化：弹性与回弹提高、永久变形减小、强度硬度耐磨提高、耐热耐溶剂改善；交联度过高则变脆。</li>
+<li><strong>橡胶制品工艺</strong>：生胶 + 配合剂（硫化剂、促进剂、活性剂、补强剂、防老剂）→ 塑炼混炼 → 成型 → 硫化（温度、时间、压力三要素）。</li>
+</ul>
+<h3>3.5 纤维</h3>
+<ul>
+<li><strong>分类</strong>：天然纤维（蚕丝、蛛丝、棉）；合成纤维（涤纶、锦纶、腈纶、丙纶）与高性能纤维（芳纶 Kevlar、UHMWPE、聚酰亚胺 PI、碳纤维）。</li>
+<li><strong>品种对应（必背）</strong>：</li>
+</ul>
+<table><thead><tr><th>俗称</th><th>化学名称</th><th>特点</th></tr></thead><tbody>
+<tr><td>涤纶</td><td>聚酯纤维（PET）</td><td>强度高、挺括、耐皱</td></tr>
+<tr><td>锦纶</td><td>聚酰胺纤维（PA，尼龙）</td><td>耐磨性最好</td></tr>
+<tr><td>腈纶</td><td>聚丙烯腈</td><td>蓬松、似羊毛</td></tr>
+<tr><td>丙纶</td><td>聚丙烯</td><td><strong>密度约 0.90 g/cm³，比水轻</strong></td></tr>
+</tbody></table>
+<ul>
+<li><strong>纺丝方法</strong>：</li>
+<li><strong>熔融纺丝</strong>：聚合物熔体经喷丝板挤出、冷却、拉伸；凡加热能熔融且不显著降解的聚合物都适用；产量大、成本低。</li>
+<li><strong>静电纺丝</strong>：高压静电场使液滴表面电荷斥力克服表面张力而拉伸，溶剂挥发/冷却固化后沉积成无纺布状纤维膜；可制 <strong>数十纳米~数微米</strong> 纤维，比表面积大、孔隙率高；用于过滤、传感、能源、组织工程；产量低。</li>
+<li><strong>碳纤维</strong>：含碳量 <strong>95 % 以上</strong>，由有机纤维（PAN 等）经预氧化、<strong>碳化及石墨化</strong>制得；拉伸强度 <strong>2~7 GPa</strong>、模量 <strong>200~700 GPa</strong>；密度比铝还低（不到钢的 1/4），比强度约为铁的 20 倍；用于航空航天（歼 20 机翼）、体育器材、风电叶片、储氢瓶。2018 年 2 月中国才完全自主研发出百吨级 T1000 生产线。</li>
+</ul>
+<hr>
+<h2>第 4 章 无机材料（陶瓷、水泥、玻璃）</h2>
+<h3>4.1 分类与特点</h3>
+<ul>
+<li><strong>传统无机非金属材料</strong>：以天然硅酸盐矿物（黏土、石英、钾长石、钠长石）为原料，经高温窑烧而成，又称<strong>窑业材料</strong>（陶瓷、玻璃、水泥、耐火材料）。</li>
+<li><strong>新型无机非金属材料</strong>：用氧化物、氮化物、碳化物、硼化物、硫化物、硅化物等经特殊工艺制成，包括特种陶瓷、特种玻璃、特种水泥等。</li>
+<li><strong>分类维度</strong>：按成分（硅酸盐、氧化物、碳化物…）、按形态（块体、薄膜、纤维、粉体）、按结构（单晶、多晶、玻璃、无定形、复合材料）、按工艺（烧结成材、湿法合成、涂镀、水硬材料）。</li>
+<li><strong>六大特点</strong>：① 化学组成为无机化合物或非金属单质；② 形态多样（多晶/单晶/非晶/薄膜/纤维）；③ 原子间结合力为<strong>离子键、共价键或混合键</strong>，故硬度高、脆、绝缘；④ 制备要求高纯、高细原料；⑤ 性能多样（高硬度、耐腐蚀、抗氧化）；⑥ 多需高温制备。</li>
+</ul>
+<h3>4.2 陶瓷简史与分类</h3>
+<ul>
+<li>粗陶（新石器时代早期，7000~8000 年前）→ 彩陶（仰韶，4000~6000 年前）→ 黑陶（龙山，轮制技术）→ 釉陶（商周，釉料）→ 粗瓷/炻器（汉代）→ 隋唐「南青北白」→ 宋代五大名窑（定、汝、官、哥、钧）→ 元代青花（瓷石 + 高岭土二元配方）→ 明清景德镇鼎盛。</li>
+<li><strong>陶器 / 炻器 / 瓷器（必背）</strong>：</li>
+</ul>
+<table><thead><tr><th>类别</th><th>吸水率</th><th>特征</th></tr></thead><tbody>
+<tr><td>陶器</td><td>10 % &gt; 吸水率 &gt; 3 %</td><td>多孔、强度低、断面粗</td></tr>
+<tr><td>炻器</td><td>3 % &gt; 吸水率 &gt; 0.5 %</td><td>半致密、耐热冲击（砂锅）</td></tr>
+<tr><td>瓷器</td><td>&lt; 0.5 %</td><td>致密、半透明、强度高、声清脆</td></tr>
+</tbody></table>
+<ul>
+<li><strong>狭义陶瓷</strong>：天然或人工合成的粉状化合物经成形和高温烧结制成的、由金属与非金属元素无机化合物构成的多晶材料。</li>
+<li><strong>广义陶瓷</strong>：以无机非金属物质为主的固体材料及其制造与应用的科学和技术。</li>
+</ul>
+<h3>4.3 陶瓷生产工艺（简答必背）</h3>
+<ol>
+<li><strong>原料配制</strong>：<strong>高岭土（黏土）、石英、长石</strong>三大类；经拣选、风化、粉碎、除杂、配料、混炼（湿法球磨、过筛除铁、陈腐）。</li>
+<li><strong>坯料成型</strong>：</li>
+</ol>
+<ul>
+<li><strong>可塑成型</strong>：旋压、滚压、拉坯、雕塑印坯（回转体、手工件）。</li>
+<li><strong>注浆成型</strong>：泥浆注入石膏模，靠吸水沉积成坯；适合<strong>薄壁、体积较大、尺寸精度要求不高</strong>的器物（卫生洁具、花瓶）；缺点是劳动强度大、不易自动化、收缩变形大。</li>
+<li><strong>干压成型</strong>：干粉在模中压制成形；产量大、缺陷少、易机械化，适合形状简单的小型坯体。</li>
+<li>坯料三种状态：注浆用泥浆、可塑成型用泥团（泥段）、干压用粉料。</li>
+</ul>
+<ol>
+<li><strong>坯体干燥</strong>：自然干燥与人工（强制）干燥；方法有对流、电热、高频、<strong>微波（915 MHz 与 2450 MHz）</strong>；微波可使坯体内加热，几分钟完成、不易变形开裂、便于联动生产。</li>
+<li><strong>窑炉烧结</strong>：脱水、分解、氧化、液相烧结、晶粒长大、气孔排除、体积收缩、强度提高；控制温度曲线、气氛与冷却制度。</li>
+<li><strong>装饰上釉、加工、检验包装</strong>。</li>
+</ol>
+<h3>4.4 水泥</h3>
+<ul>
+<li><strong>定义</strong>：狭义水泥专指现代水泥——具有<strong>水硬性</strong>的胶凝材料（既能在空气中硬化，也能在水中硬化）。</li>
+<li><strong>发展</strong>：1886 年澳门青洲岛第一家水泥厂；1889 年唐山建厂；我国新型干法水泥起步于 20 世纪 70 年代，80 年代成套引进，90 年代形成规模。</li>
+<li><strong>分类</strong>：按用途性能（通用、专用、特种）；按组成（硅酸盐、铝酸盐、氟铝酸盐、硫铝酸盐、铁铝酸盐系列）。</li>
+<li><strong>硅酸盐水泥生产三阶段</strong>：<strong>生料制备</strong>（石灰石 + 黏土 + 铁粉混合磨细）→ <strong>熟料煅烧（1400~1450 ℃）</strong> → <strong>水泥粉磨</strong>（熟料 + 石膏 + 混合材）。</li>
+<li><strong>环保</strong>：余热发电、协同处置固废、替代燃料。</li>
+<li><strong>地位</strong>：中国建材集团熟料产能 5.3 亿吨、商混 4.6 亿立方米，均居世界第一。</li>
+</ul>
+<h3>4.5 玻璃</h3>
+<ul>
+<li><strong>原料</strong>：石英砂、纯碱、石灰石、长石（+ 澄清剂、着色剂、碎玻璃）。</li>
+<li><strong>四大特性</strong>：各向同性、<strong>无固定熔点</strong>（软化温度范围）、<strong>亚稳态</strong>（非晶态）、性质可调（通过成分与再加工大幅调整）。</li>
+<li><strong>生产工艺（四步，必背）</strong>：</li>
+</ul>
+<ol>
+<li><strong>配料</strong>：按料方称量混合。</li>
+<li><strong>熔制</strong>：1400~1600 ℃，经历硅酸盐形成、玻璃形成、澄清、均化、冷却。</li>
+<li><strong>成形</strong>：在黏度—温度窗口内由黏性液态 → 可塑态 → 脆性固态；人工吹制/拉制，机械压制/压延/浇铸/离心浇铸/烧结。</li>
+<li><strong>退火</strong>：缓慢冷却消除热应力，防止炸裂、提高强度与热稳定性。</li>
+</ol>
+<ul>
+<li><strong>品种</strong>：普通玻璃（高温易软化）、石英玻璃（膨胀系数小、耐酸碱、强度大、滤光）、光学玻璃（透光、折光、色散）、玻璃纤维（耐腐蚀、耐高温、不导电、隔热，用于玻璃钢、宇航服、光导）、钢化玻璃（表面压应力，耐冲击，碎后颗粒）、有色玻璃。</li>
+<li><strong>产业</strong>：福耀为全球第二大、中国第一大汽车玻璃厂商（市占率 63 %）。</li>
+</ul>
+<h3>4.6 先进陶瓷</h3>
+<ul>
+<li><strong>定义</strong>：采用高度精选或合成的原料、精确控制化学组成、按便于控制的制造技术加工、便于结构设计、具有优异特性的陶瓷。</li>
+<li><strong>普通 vs 先进（必背表）</strong>：</li>
+</ul>
+<table><thead><tr><th>维度</th><th>普通陶瓷</th><th>先进陶瓷</th></tr></thead><tbody>
+<tr><td>原料</td><td>天然矿物</td><td>人工精制/合成（Al₂O₃、ZrO₂、Si₃N₄、SiC）</td></tr>
+<tr><td>成型</td><td>注浆、可塑为主</td><td>模压、等静压、流延、注射</td></tr>
+<tr><td>烧成</td><td>&lt; 1350 ℃，煤-油-气</td><td>结构陶瓷约 <strong>1600 ℃</strong>；功能陶瓷精确控温</td></tr>
+<tr><td>加工</td><td>一般不需</td><td>需切割、打孔、研磨、抛光</td></tr>
+<tr><td>性能</td><td>以外观为主</td><td>特定物理化学性能</td></tr>
+<tr><td>用途</td><td>餐具、墙地砖、洁具</td><td>交通、家电、航空航天、电子、医疗</td></tr>
+</tbody></table>
+<ul>
+<li><strong>结构陶瓷</strong>：高强度、高硬度、高弹性模量、耐高温、耐磨、耐蚀、抗氧化（高温陶瓷、高强陶瓷、超硬陶瓷、耐腐蚀陶瓷）。按组分：氧化物、氮化物（Si₃N₄）、碳化物（SiC、WC、TiC、B₄C）、硼化物（ZrB₂，抗氧化强）。</li>
+<li><strong>功能陶瓷</strong>：占先进陶瓷市场约 <strong>70 %</strong>；分电功能（绝缘、介电、铁电、压电、半导体、快离子导体、超导）、磁功能（软磁/硬磁铁氧体）、光功能（透明陶瓷、透明铁电陶瓷）、敏感（热敏、气敏、湿敏、压敏、光敏）、生物与化学功能（载体、催化、生物陶瓷）。</li>
+<li><strong>制造流程</strong>：<strong>粉体制备 → 坯体成型 → 坯体烧结 → 精加工</strong>。</li>
+<li>粉体：<strong>物理粉碎法</strong>（机械/气流，成本低但杂质多、粒度 &gt;1 μm）；<strong>化学合成法</strong>——固相法（热分解、化合、氧化还原/还原碳化氮化，如 3SiO₂+6C+2N₂→Si₃N₄+6CO）、液相法（水热、水解、喷雾，成分均匀）、气相法（CVD，纯度高、粒度细）。</li>
+<li>成型：干法压制（干压、冷等静压）、塑性成型（挤压、注射、热蜡铸、扎膜）、浆料成型（注浆、流延、凝胶注模、原位凝固）、固体无模成型（FDM、3DP、LOM、SLA、SLS）。</li>
+<li><strong>等静压</strong>：液体介质不可压缩、压力均匀；坯体密度高、接近理论密度、不易变形；设备贵、不易自动化、效率低。</li>
+<li><strong>流延成型</strong>：专用于薄膜（MLCC 介质层）；工艺稳定、效率高；坯体粘结剂多、密度小、收缩大。</li>
+<li>烧结：<strong>常压烧结</strong>（无外压，靠表面能）、<strong>热压烧结</strong>（温度低、时间短、密度高，但设备贵、效率低）、<strong>气氛烧结</strong>（Si₃N₄、SiC 防氧化）、热等静压 HIP。</li>
+<li>精加工：磨削（金属靠剪切出切屑，<strong>陶瓷靠磨粒撞击产生裂纹扩展去除</strong>）、切割（金刚石砂轮、磨料水射流）、打孔（金刚石钻头、激光、超声、电火花）。</li>
+<li><strong>典型材料</strong>：Al₂O₃（耐火、耐磨、电子绝缘）、ZrO₂（<strong>相变增韧</strong>、高韧性、氧传感器、陶瓷轴承）、Si₃N₄（高温抗氧化、抗热冲击、轴承与刀具）、SiC（高温强度、高温轴承、换热器）、BaTiO₃（高介电常数、MLCC）。</li>
+</ul>
+<h3>4.7 无机材料前沿</h3>
+<ul>
+<li>国防：<strong>雷达天线罩</strong>（透波、防热、防机械损伤，氧化铝等；高超音速武器头锥）。</li>
+<li>航天：<strong>隔热瓦</strong>（外层高辐射陶瓷 + 内部低导热陶瓷纤维；烧蚀防热材料靠有机物热解气化带走热量 + 多孔碳层隔热）。</li>
+<li>航空：<strong>热障涂层（TBC）</strong>，沉积在高温合金表面，降低基体温度、提高涡轮叶片承温能力。</li>
+<li>医疗：陶瓷人工关节（耐磨、亲水自润滑、硬度仅次于金刚石、生物相容、磨损颗粒小）。</li>
+<li>5G：氧化锆陶瓷手机后盖，介电系数是蓝宝石 3 倍、钢化玻璃 10 倍，透波性好。</li>
+</ul>
+<hr>
+<h2>第 5 章 材料成型及控制工程基础</h2>
+<h3>5.1 加工制造的概念</h3>
+<ul>
+<li>中国拥有 <strong>41 个工业大类、207 个工业中类、666 个工业小类</strong>，是全世界唯一拥有联合国产业分类全部工业门类的国家。</li>
+<li><strong>产业链</strong>：上游资源采掘（煤炭 05、油气 06、黑色金属 07、有色金属 08、非金属 09）→ 中游原料加工（炼化 25、化工 26、医药化纤 27/28、橡塑与非金属矿物 29/30、冶炼压延 31/32、金属制品 33、通用/专用设备 34/35）→ 下游终端制造（汽车 36、铁路船舶航空 37、电气机械 38、计算机通信电子 39、消费品 13~24）与基础配套（电力 44、燃气 45、水 46）。</li>
+<li><strong>加工制造的三层含义</strong>：经济活动（创造财富）、工业生产（改变物质形态）、核心引擎（工艺技术把原材料变为高附加值产品）。</li>
+</ul>
+<h3>5.2 材料加工的两大类（必背）</h3>
+<table><thead><tr><th>类别</th><th>工艺</th><th>特点</th></tr></thead><tbody>
+<tr><td><strong>热加工</strong> Hot process</td><td>铸造 Casting、锻压 Forging、焊接 Welding、增材制造 Additive manufacture、粉末冶金 Powder metallurgy</td><td>改变状态/组织，成形与改性一体，材料利用率高，可做大件与复杂形状</td></tr>
+<tr><td><strong>冷加工/机加工</strong> Machining</td><td>车 Lathing、铣 Milling、刨 Planing、磨 Grinding、钻 Drilling</td><td>切削去除材料，精度与表面质量高，但材料利用率低</td></tr>
+</tbody></table>
+<ul>
+<li>流程：原材料（板/棒/锭/粉体/熔体）→ 热加工或冷加工 → 产品/零部件。</li>
+<li>趋势：<strong>近净成形（near net forming）</strong>——少量加工或不再加工即可使用，提高利用率、降低能耗。</li>
+</ul>
+<h3>5.3 工程素养与工匠精神</h3>
+<ul>
+<li><strong>工程师的基本平衡</strong>：<strong>成本 Cost</strong> ↔ <strong>功能与性能 Function &amp; properties</strong> ↔ <strong>品质 Performance</strong>，并「选择可获得的制造工艺」。</li>
+<li><strong>优秀工程师素养</strong>：敦厚的道德品行、强烈的责任意识、扎实的技术功底、严谨的工程思维、良好的沟通协作、与时俱进的学习意识。</li>
+<li><strong>三国工匠精神</strong>：瑞士——精密极致、手工美学、品牌荣誉（精品化、贵族化）；日本——严守标准、秩序优先、系统严谨、长期深耕、集体负责；德国——一生专注一事、细节偏执、全员改善、敬畏本职。</li>
+<li><strong>新时代中国工匠精神四层</strong>：① 传承底色（鲁班、李春、黄道婆，经世致用、敬畏自然）；② 现实目标（问题导向、务实创新，既攻高端卡脖子又做好大生产细节）；③ 价值格局（家国情怀，服务国家战略）；④ 职业操守与质量责任。</li>
+</ul>
+<h3>5.4 现代制造技术与模式</h3>
+<ul>
+<li>演进：手工（By hands）→ 工具—机床—机器人 → <strong>CAD/CAM/CIM</strong> → <strong>智能制造（IM）</strong>。</li>
+<li>典型：CNC 数控加工；<strong>虚拟制造</strong>（一汽大众焊接工艺仿真、吉利焊装线虚拟调试）；<strong>智能制造</strong>（美的武汉工厂智能视觉检测、天津海尔 5G 工厂、阿里巴巴犀牛智造个性化定制）；增材制造；数字孪生。</li>
+<li>意义：缩短周期、降低试制成本、提高质量一致性、支持多规格小批量柔性生产。</li>
+</ul>
+<hr>
+<h2>第 6 章 典型热加工工艺（一）：铸造</h2>
+<h3>6.1 定义与地位</h3>
+<ul>
+<li><strong>铸造（Casting）</strong>：将熔化好的液态金属倒入具有特定形状空腔的耐火模具，凝固成形后打破或拆开模具取出零件——又称<strong>金属液态成形</strong>。</li>
+<li>工艺流程：<strong>液体金属 → 充型 → 凝固收缩 → 铸件</strong>。</li>
+<li>人类最早掌握的金属热加工工艺；优势是可做复杂形状（含内腔）与大型件、成本低、适应性强。</li>
+</ul>
+<h3>6.2 专业术语（必背）</h3>
+<table><thead><tr><th>术语</th><th>含义</th></tr></thead><tbody>
+<tr><td>砂箱 Flask</td><td>盛放型砂的箱体（型箱）</td></tr>
+<tr><td><strong>分型面</strong> Parting line</td><td>铸件的<strong>最大截面</strong>、上下砂型的接合面</td></tr>
+<tr><td>上型箱 Cope / 下型箱 Drag</td><td>分型面上/下的砂箱</td></tr>
+<tr><td>型芯 Core</td><td>形成铸件内腔或孔洞</td></tr>
+<tr><td>型腔 Cavity</td><td>金属填充的空间</td></tr>
+<tr><td>透气孔 Vent</td><td>排出型砂受热产生的气体</td></tr>
+<tr><td>浇口 Gate</td><td>金属浇铸入口</td></tr>
+<tr><td>型砂 Sand</td><td>形成型腔、包裹金属的材料</td></tr>
+<tr><td>冒口 Riser</td><td>储存金属液，补缩防缩孔</td></tr>
+</tbody></table>
+<ul>
+<li><strong>模样（Pattern）裕量</strong>（简答高频）：凝固收缩裕量、拔模裕量、震动裕量、失稳（变形）裕量、机加工裕量；另需设置<strong>芯头</strong>，并可忽略非关键局部细节。</li>
+</ul>
+<h3>6.3 砂型铸造流程（必背）</h3>
+<p>填充下型箱并放置下模样 → 放置型芯（如有）→ 填充上型箱并放置上模样 → 翻转 → 上下型箱合模 → 制作浇注系统与排气孔/冒口 → 取出模样形成型腔 → 合箱浇注 → 落砂清理 → 热处理与检验。</p>
+<h3>6.4 熔化与配料</h3>
+<ul>
+<li>炉子：冲天炉（熔炼<strong>铸铁</strong>，建造与熔化成本低）、坑式炉、平炉、转炉、电炉（铸钢）。</li>
+<li>冲天炉元素变化：<strong>C 吸收约 0.15 %、S 吸收约 0.05 %；Si 氧化烧损约 10 %（恶劣工况可达 30 %）、Mn 氧化烧损约 10 %</strong>。</li>
+<li>配料计算三步：<strong>试算（Trial）→ 平衡（Balance）→ 检验（Check）</strong>，如 30 % 生铁 1# + 30 % 生铁 3# + 40 % 废钢 1#，再用硅铁调硅。</li>
+</ul>
+<h3>6.5 铸造缺陷（简答必背）</h3>
+<table><thead><tr><th>缺陷</th><th>英文</th><th>成因</th><th>防止</th></tr></thead><tbody>
+<tr><td>气孔/针孔</td><td>blow holes / pin hole</td><td>型砂水分高、透气性差、卷气</td><td>控制水分、提高透气性、开排气孔、平稳充型</td></tr>
+<tr><td>砂眼/夹砂</td><td>open holes / inclusions</td><td>型砂强度不足被冲落、掉砂</td><td>提高强度与紧实度、清理型腔</td></tr>
+<tr><td>夹渣</td><td>slag</td><td>熔炼不净、挡渣不良</td><td>净化金属液、过滤网、集渣包</td></tr>
+<tr><td>缩孔/缩松</td><td>porosity</td><td>凝固收缩未获补缩</td><td>冒口、冷铁、顺序凝固、控制浇温</td></tr>
+<tr><td>鼠尾/涨型/落砂</td><td>rat tails / swell / drop</td><td>型壁强度或刚度不足</td><td>提高型砂强度、加固、降低浇速</td></tr>
+<tr><td>热裂/冷裂</td><td>cracks</td><td>收缩受阻、应力过大</td><td>改善退让性、合理浇冒口、控制冷却</td></tr>
+<tr><td>硬点</td><td>hot spots</td><td>局部冷却过快</td><td>均匀冷却、控制成分</td></tr>
+</tbody></table>
+<h3>6.6 特种铸造对比（必背表）</h3>
+<table><thead><tr><th>方法</th><th>原理</th><th>优点</th><th>局限</th><th>典型件</th></tr></thead><tbody>
+<tr><td>砂型铸造</td><td>砂型一次使用</td><td>成本低、适应性强、可做大件</td><td>精度低、表面粗、组织粗大</td><td>床身、缸体</td></tr>
+<tr><td><strong>壳模铸造</strong></td><td>树脂砂覆在预热金属模上成壳</td><td>近净成形、表面好、精度高</td><td>模样与树脂成本高</td><td>中小复杂件</td></tr>
+<tr><td><strong>熔模铸造</strong>（失蜡/包模）</td><td>蜡模 + 多层陶瓷型壳，脱蜡焙烧后浇注</td><td>精度最高、可铸极复杂与高温合金件</td><td>工序长、成本高、件重受限</td><td>涡轮叶片（单晶/定向）、五金首饰</td></tr>
+<tr><td><strong>金属型（永久模）</strong></td><td>金属模重复使用</td><td>组织致密、精度较高、模具寿命长</td><td>受模具熔点限制，只能低熔点合金（铝镁铜锡锌铅）</td><td>铝活塞、铜合金件</td></tr>
+<tr><td><strong>压力铸造</strong></td><td>高压高速压入金属型</td><td>效率最高、精度最高、可薄壁</td><td>易卷气、不宜热处理</td><td>手机中框、汽车小件</td></tr>
+<tr><td><strong>离心铸造</strong></td><td>铸型绕轴高速旋转</td><td>无需型芯得同心孔、夹杂易分离</td><td>只适合轴对称件</td><td>铸铁下水管、缸套</td></tr>
+<tr><td><strong>挤压铸造</strong>（液态模锻）</td><td>高压下充型并凝固</td><td>晶粒细、性能好、气孔少</td><td>模具贵、形状受限</td><td>轮毂、制动钳</td></tr>
+</tbody></table>
+<ul>
+<li><strong>消失模铸造</strong>是包模铸造的现代实现形式：模样不取出，金属液浇在模样上使其气化消失。</li>
+<li><strong>半固态成形（SSM）</strong>：凝固中搅拌打碎枝晶成细小固相颗粒，呈低黏度糊态；结合铸造与锻造优势（净成形、高质量、低能耗）。</li>
+</ul>
+<h3>6.7 铸造组织控制</h3>
+<ul>
+<li>铸件凝固组织通常为<strong>粗大树枝晶</strong>（表层细晶区、中间柱状晶区、中心等轴晶区）。</li>
+<li>细化措施：提高冷却速度（金属型、冷铁）、变质/孕育处理（增加形核）、低温浇注与搅拌（电磁、机械、超声）、半固态成形、压力凝固。</li>
+<li><strong>定向凝固（DS）与单晶（SX）</strong>：等轴晶 → 定向柱晶 → 单晶，承温能力依次提高（航空发动机叶片）。</li>
+</ul>
+<hr>
+<h2>第 7 章 典型热加工工艺（二）：锻压与板料成形</h2>
+<h3>7.1 塑性变形基础</h3>
+<ul>
+<li>晶格水平的原子运动：<strong>滑移</strong>与<strong>孪生</strong>。</li>
+<li><strong>塑性变形</strong>：永久变形，超出弹性范围；可导致组织变化、再结晶与晶粒细化，还能消除内部缺陷、破碎夹杂物，改善力学性能。</li>
+<li><strong>加工硬化</strong>：冷变形使位错密度增加、相互缠结，强度硬度升高、塑性下降。</li>
+<li><strong>回复</strong>：较低温退火，空位与位错重排、异号位错相消，储存能下降，晶粒形状不变。</li>
+<li><strong>再结晶</strong>：更高温度下新晶粒形核长大，变形组织被无畸变等轴晶取代，硬化消除、塑性恢复。</li>
+<li><strong>晶粒长大</strong>：再结晶后继续升温/保温，晶粒粗化、性能下降。</li>
+</ul>
+<h3>7.2 热作与冷作（必背对比）</h3>
+<p>划分依据：<strong>变形温度相对于材料再结晶温度</strong>。</p>
+<table><thead><tr><th></th><th>热作</th><th>冷作</th></tr></thead><tbody>
+<tr><td>优点</td><td>可反复大变形、无加工硬化；高温延展性好；设备压力低；可得等轴细晶</td><td>显著提高强度硬度；表面无氧化物、光洁；尺寸精度高；夹持搬运方便</td></tr>
+<tr><td>缺点</td><td>高温脆性材料不能热作；氧化使表面差；膨胀收缩难控尺寸；大件搬运难</td><td>单次变形量小、多道次；设备载荷大、成本高；需中间退火；低温脆性材料不能冷作</td></tr>
+</tbody></table>
+<ul>
+<li>温度与晶粒：超过再结晶温度后晶粒持续长大；加热后不变形直接冷却晶粒粗大；<strong>热加工在略高于再结晶温度完成时晶粒最细</strong>。</li>
+</ul>
+<h3>7.3 轧制</h3>
+<ul>
+<li>原理：坯料通过一对旋转轧辊的间隙，受压缩而厚度减小、长度增加；<strong>钢铁塑性加工 90 % 以上靠轧制</strong>。</li>
+<li>产品：钢板、钢带、螺纹钢、角钢、槽钢、H 型钢、无缝钢管、线材。</li>
+<li><strong>孔型（roll pass）</strong>：轧辊上的沟槽，决定断面形状。开坯孔型有箱型（大截面、压缩率较低）、菱-方（接触面小、轧辊强度低）、椭-方（压缩率大、宽度方向变形均匀性差）。</li>
+<li><strong>压缩率（draught）</strong>：每道厚度压下量比例，需合理分配。</li>
+<li><strong>无缝钢管</strong>：1885 年<strong>曼内斯曼</strong>兄弟提出斜轧穿孔，斯蒂费尔加固定芯棒，形成桶型二辊斜轧法——圆棒受循环压缩应力，中心形成空腔并扩大，芯棒整形。</li>
+<li><strong>TMCP（控轧控冷）</strong>：控制加热温度、轧制过程与冷却条件提高强韧性（加热→轧制→层流冷却→卷取）。</li>
+<li><strong>冷轧 vs 热轧</strong>：冷轧在再结晶温度以下，表面好、精度高、有加工硬化；热轧在以上，效率高、成本低。</li>
+</ul>
+<h3>7.4 锻造</h3>
+<ul>
+<li>定义：将金属加热后施加外力使其塑性成形；<strong>人类最古老的金属加工工艺之一</strong>（铜器时代已有）。</li>
+<li>两种基本操作：<strong>拔长</strong>（减小截面积、增加长度）、<strong>镦粗</strong>（减小长度、增加截面积）。</li>
+<li><strong>自由锻</strong>：无需专用模具，成本低，适合单件小批、大件、试制；精度低、余量大。</li>
+<li><strong>机器锻造</strong>：气动/液压锻锤，镦粗最常见。</li>
+<li><strong>落锤模锻（闭式模具）</strong>：反复锤击充满型腔，典型道次：充型、挤压飞边、弯曲、压实，最后切除飞边；精度高、生产率高、适合大批量。</li>
+<li><strong>纤维流线（grain flow）</strong>：模锻使流线沿零件轮廓连续分布，锻合内部缺陷、细化晶粒，显著提高疲劳强度与冲击韧性（曲轴、连杆、齿轮）。</li>
+</ul>
+<h3>7.5 挤压</h3>
+<ul>
+<li>原理：金属在封闭型腔内仅通过一个开口流出，得到与出口一致的截面（类似挤牙膏）。</li>
+<li>分类：热挤压/冷挤压；<strong>正向挤压</strong>（金属流动与冲头同向，坯料与筒壁有摩擦，需润滑：低温油 + 石墨、高温熔融玻璃）、<strong>反向挤压</strong>（模具在冲头，金属反向流出，无筒壁摩擦、压力低、组织均匀）；冲挤、液压挤压。</li>
+<li>特点：可制任意长度等截面件；模具小、可做复杂甚至中空截面；减径量大；脆性材料也可挤压。</li>
+<li><strong>空心型材</strong>：需组合模——上模分流桥把坯料劈成几股，在焊合室重新焊合，再由模芯与下模孔间隙挤出，形成内外轮廓（铝型材）。</li>
+</ul>
+<h3>7.6 板料成形（钣金/冲压）</h3>
+<ul>
+<li>现代钣金加工以<strong>冲压</strong>为主（汽车覆盖件、家电外壳）。</li>
+<li><strong>回弹</strong>：卸载后弹性部分恢复、塑性部分保留；回弹量是材料基本性能参数，需在模具设计中补偿。</li>
+<li><strong>冲裁间隙</strong>：C = 0.0032 · t · τ^(1/2)（t 板厚 mm，τ 剪切应力）；间隙过大 → 塌角与毛刺大；过小 → 冲裁力与模具磨损增大。</li>
+<li><strong>冲模角度</strong>：一般 0.25°~0.75°，厚而软的材料取大值。</li>
+<li><strong>落料 vs 冲孔</strong>：落料冲下的是零件、周边是废料；冲孔冲出的是废料、带孔板料是零件。</li>
+<li><strong>拼板焊接（TWB）</strong>：不同厚度/强度钢板对接焊后冲压，实现按需加强、减重（激光焊/电子束焊/搅拌摩擦焊）。</li>
+<li><strong>一体化压铸</strong>：把白车身数百零件、数千焊点合并为一次成形（特斯拉等），挑战是免热处理高强铸造铝合金、超大压铸机与模具、废品率与维修成本。</li>
+</ul>
+<hr>
+<h2>第 8 章 典型热加工工艺（三）：焊接</h2>
+<h3>8.1 定义与分类（必背）</h3>
+<ul>
+<li><strong>焊接</strong>：一个<strong>冶金连接</strong>过程——待连接工件的两个界面被加热到熔点以上并共同凝固（或加压使原子接近到形成金属键），形成永久连接。</li>
+<li><strong>传统分类</strong>：<strong>熔化焊</strong>（母材熔化）、<strong>压力焊</strong>（加压，不熔化或局部熔化）、<strong>钎焊</strong>（母材不熔化、钎料熔化）。</li>
+<li><strong>新分类</strong>：电弧焊、固相焊、电阻焊、钎焊、高能束焊。</li>
+<li>连接方式对比：焊接（冶金结合）、胶接（Adhesive bonding，靠胶粘剂）、机械连接（螺栓、铆接）。</li>
+</ul>
+<h3>8.2 主要焊接方法</h3>
+<table><thead><tr><th>大类</th><th>方法</th><th>特点</th></tr></thead><tbody>
+<tr><td>电弧焊</td><td>焊条电弧焊 SMAW/MMA</td><td>设备简单、全位置、适应性强，应用最广；药皮起保护、稳弧、脱氧、合金化作用</td></tr>
+<tr><td></td><td>熔化极气体保护焊 GMAW/MIG</td><td>焊丝熔化、效率高，适合中厚板与自动化</td></tr>
+<tr><td></td><td>钨极氩弧焊 GTAW/TIG</td><td>非熔化钨极、氩气保护，质量高、成形美观，适合薄板与有色金属打底</td></tr>
+<tr><td></td><td>等离子弧焊 PAW</td><td>能量密度高于 TIG，可穿孔焊</td></tr>
+<tr><td></td><td>埋弧焊 SAW</td><td>焊剂层下燃烧，无弧光飞溅、熔敷效率高，适合厚板长直缝自动化</td></tr>
+<tr><td>固相焊</td><td>扩散焊、摩擦焊、<strong>搅拌摩擦焊 FSW</strong>、冷压焊、爆炸焊、超声波焊</td><td>FSW 靠搅拌头摩擦热使材料软化塑性流动，不熔化，无气孔裂纹，适合铝合金</td></tr>
+<tr><td>电阻焊</td><td>点焊、缝焊、凸焊、对焊、闪光焊</td><td>利用接触电阻<strong>焦耳热</strong>（Q=I²Rt）+ 电极压力；白车身 4000~6000 焊点</td></tr>
+<tr><td>钎焊</td><td>炉中、浸焊、火焰、<strong>回流焊</strong>、感应、<strong>波峰焊</strong></td><td>母材不熔化，靠钎料润湿与毛细作用填充；<strong>以 450 ℃ 为界</strong>：低于为软钎焊（Soldering），高于为硬钎焊（Brazing）</td></tr>
+<tr><td>高能束焊</td><td>激光焊、电子束焊</td><td>能量密度极高、热影响区窄、深宽比大、变形小；电子束需真空</td></tr>
+</tbody></table>
+<h3>8.3 焊接应力与变形</h3>
+<ul>
+<li><strong>产生原因</strong>：局部、快速、不均匀加热与冷却；焊缝区受周围冷金属约束产生塑性变形，冷却收缩受阻形成拉应力；相变（马氏体）伴随体积变化产生组织应力。</li>
+<li><strong>危害</strong>：降低刚度与稳定性、引起尺寸失稳、促进应力腐蚀与疲劳、降低承载能力。</li>
+<li><strong>控制（减小）</strong>：合理设计接头（减少焊缝、避免应力集中）；合理焊接顺序（对称、分段退焊）；<strong>反变形法</strong>；刚性固定；小线能量、多层多道；预热与缓冷。</li>
+<li><strong>消除</strong>：<strong>去应力退火</strong>（550~650 ℃）；振动时效；锤击、喷丸、超声冲击；机械拉伸法。</li>
+<li><strong>矫正</strong>：机械矫正（压力机、锤击）、火焰矫正。</li>
+<li><strong>线能量 E = U·I/v</strong>：越大 → HAZ 越宽、晶粒越粗、韧性越低；过小 → 淬硬与冷裂纹风险。</li>
+</ul>
+<h3>8.4 焊接缺陷与检验</h3>
+<table><thead><tr><th>缺陷</th><th>成因</th><th>防止</th></tr></thead><tbody>
+<tr><td>气孔</td><td>氢、氮、CO 来不及逸出；焊材受潮、坡口有油锈水、保护不良</td><td>烘干焊材、清理坡口、加强保护、控制线能量</td></tr>
+<tr><td>夹渣</td><td>熔渣未浮出</td><td>层间清渣、正确运条、合适电流</td></tr>
+<tr><td>未熔合/未焊透</td><td>热输入不足、坡口不当、电弧偏吹</td><td>合理坡口与间隙、足够电流、正确角度</td></tr>
+<tr><td><strong>热裂纹</strong></td><td>凝固时晶界液膜、S/P 偏析、收缩应力</td><td>控制杂质、调整成分、减小拘束</td></tr>
+<tr><td><strong>冷裂纹（氢致）</strong></td><td>氢 + 淬硬组织 + 应力三要素</td><td>低氢焊材、预热、后热消氢、焊后热处理</td></tr>
+<tr><td>咬边/焊瘤/凹坑</td><td>电流过大、运条不当</td><td>调整参数、提高技能</td></tr>
+<tr><td>变形/残余应力</td><td>不均匀加热</td><td>顺序、反变形、刚性固定、去应力</td></tr>
+</tbody></table>
+<ul>
+<li><strong>焊接工艺评定（PQR）</strong>：用试件验证拟定工艺（pWPS）能否满足要求，合格后编制 <strong>WPS</strong> 指导生产；压力容器、船舶、钢结构的强制要求（NB/T 47014、ASME IX）。</li>
+<li>常用检验：外观、RT（射线）、UT（超声）、MT/PT（表面）、硬度、力学性能试板、水压试验。</li>
+</ul>
+<h3>8.5 焊接热影响区（HAZ）</h3>
+<ul>
+<li>定义：焊缝两侧母材受焊接热循环作用而发生组织与性能变化的区域；宽度随方法与热输入而变（电子束/激光最窄，气焊最宽）。</li>
+<li>分区：熔合区 → <strong>过热区</strong>（晶粒粗大、韧性差）→ 正火区（细晶，性能最好）→ 不完全重结晶区 → 回火软化区（调质钢、冷作材料）。</li>
+<li>为什么是薄弱环节：组织性能不均匀、晶粒粗化、可能形成淬硬马氏体或软化带，裂纹常起源于此。</li>
+<li>改善：控制线能量、预热/后热、低碳当量材料、焊后热处理、高能束焊。</li>
+</ul>
+<hr>
+<h2>附录 A：数字速记（判断/选择高频）</h2>
+<table><thead><tr><th>数字</th><th>含义</th></tr></thead><tbody>
+<tr><td>92</td><td>天然存在的化学元素种类</td></tr>
+<tr><td>727 ℃ / 0.77 %C</td><td>共析点 S（珠光体）</td></tr>
+<tr><td>1148 ℃ / 4.30 %C</td><td>共晶点 C</td></tr>
+<tr><td>1495 ℃</td><td>包晶线 HJB</td></tr>
+<tr><td>2.11 %C</td><td>钢与铸铁分界 E 点</td></tr>
+<tr><td>6.69 %</td><td>渗碳体含碳量</td></tr>
+<tr><td>0.0218 %</td><td>铁素体最大含碳量</td></tr>
+<tr><td>12.8 %</td><td>不锈钢最低含铬量</td></tr>
+<tr><td>7.85 / 2.70 / 4.51 g/cm³</td><td>钢 / 铝 / 钛密度</td></tr>
+<tr><td>300 MPa</td><td>早期 GFRP 屈服强度</td></tr>
+<tr><td>125 ℃ / 165 ℃</td><td>HDPE / PP 熔点</td></tr>
+<tr><td>450 ℃</td><td>软钎焊与硬钎焊分界</td></tr>
+<tr><td>1350 ℃ / 1600 ℃</td><td>普通陶瓷 / 结构陶瓷烧成温度</td></tr>
+<tr><td>1400~1450 ℃</td><td>水泥熟料煅烧温度</td></tr>
+<tr><td>915 / 2450 MHz</td><td>陶瓷微波干燥频率</td></tr>
+<tr><td>70 %</td><td>功能陶瓷占先进陶瓷市场份额</td></tr>
+<tr><td>90 %</td><td>钢铁塑性加工中轧制占比</td></tr>
+<tr><td>95 %</td><td>碳纤维含碳量下限</td></tr>
+<tr><td>18.49 亿 / 9.61 亿吨</td><td>2025 年全球 / 中国粗钢产量</td></tr>
+<tr><td>41 / 207 / 666</td><td>中国工业大类/中类/小类数</td></tr>
+</tbody></table>
+<h2>附录 B：易混概念对照</h2>
+<table><thead><tr><th>易混</th><th>区别</th></tr></thead><tbody>
+<tr><td>相 vs 组织</td><td>相＝成分结构均匀的区域；组织＝相的种类数量大小形状分布</td></tr>
+<tr><td>铁素体 vs 奥氏体</td><td>α-Fe（BCC，≤0.0218 %C，软）vs γ-Fe（FCC，&gt;727 ℃，塑性好）</td></tr>
+<tr><td>沸腾钢 vs 镇静钢</td><td>脱氧不完全、偏析大 vs 完全脱氧、致密均匀</td></tr>
+<tr><td>热轧 vs 冷轧</td><td>再结晶温度以上 vs 以下；后者精度高但有加工硬化</td></tr>
+<tr><td>拔长 vs 镦粗</td><td>减截面增长度 vs 减长度增截面</td></tr>
+<tr><td>落料 vs 冲孔</td><td>冲下的是零件 vs 冲下的是废料</td></tr>
+<tr><td>熔焊 vs 钎焊</td><td>母材熔化 vs 母材不熔化、钎料熔化</td></tr>
+<tr><td>软钎焊 vs 硬钎焊</td><td>钎料熔点 &lt;450 ℃ vs &gt;450 ℃</td></tr>
+<tr><td>陶器/炻器/瓷器</td><td>吸水率 3~10 % / 0.5~3 % / &lt;0.5 %</td></tr>
+<tr><td>传统陶瓷 vs 先进陶瓷</td><td>天然矿物、&lt;1350 ℃ vs 合成原料、约 1600 ℃、需精加工</td></tr>
+<tr><td>热压烧结 vs 常压烧结</td><td>加 pressure 致密化 vs 仅靠表面能</td></tr>
+<tr><td>砂型 vs 金属型</td><td>一次使用、适应广 vs 重复使用、只低熔点合金</td></tr>
+</tbody></table>
+<h2>附录 C：答题模板</h2>
+<p><strong>简答题（4 步）</strong></p>
+<ol>
+<li><strong>定义</strong>：一句话说清是什么。</li>
+<li><strong>分类/特点</strong>：分 2~4 点，每点一个关键词。</li>
+<li><strong>例子</strong>：给 1~2 个具体材料或工艺。</li>
+<li><strong>小结</strong>：一句工程意义（为什么重要）。</li>
+</ol>
+<p><strong>综合分析题（5 步）</strong></p>
+<ol>
+<li><strong>读题定位</strong>：这是什么材料？什么工艺？什么失效模式？</li>
+<li><strong>原理</strong>：用「成分 + 工艺 → 结构 → 性能」解释现象，必要时写公式（相图温度、E=UI/v、C=0.0032t√τ、Q=I²Rt）。</li>
+<li><strong>方案</strong>：给出具体工艺路线或材料选择，说明理由（对比 2~3 个方案）。</li>
+<li><strong>控制</strong>：列出缺陷/风险的防止措施（工艺参数、检测）。</li>
+<li><strong>结论</strong>：回到服役与经济性，点明「材料—工艺—结构—性能」的闭环。</li>
+</ol>
+<p><strong>万能句式</strong></p>
+<ul>
+<li>「该现象的本质是……，其组织为……，因此性能表现为……」</li>
+<li>「从工艺角度看，可通过……控制……，从而避免……」</li>
+<li>「需通过……检测验证，确保……满足服役要求。」</li>
+</ul>
+<h2>附录 D：简答题背诵索引（40 题）</h2>
+<ol>
+<li>材料定义与结构—性能主线；2. 性能提升三条路径；3. 相与组织的区别；4. 材料发展史与加工技术作用；5. 五种分析技术；6. Fe-Fe₃C 三条线三个点；7. 钢中五种基本相；8. 钢铁生产工序；9. 热轧与冷轧；10. 五大金属对比；</li>
+<li>塑料五大成型方法；12. 橡胶硫化；13. 六大通用塑料；14. 纤维品种与纺丝；15. 碳纤维；16. 陶/炻/瓷；17. 陶瓷三大步骤；18. 普通与先进陶瓷对比；19. 粉体制备三法；20. 玻璃生产工序；</li>
+<li>热加工与冷加工；22. 产业链位置；23. 现代制造模式；24. 工匠精神；25. 制造工艺选择因素；26. 砂型铸造流程；27. 铸造缺陷；28. 特种铸造对比；29. 铸造组织细化；30. 模样裕量；</li>
+<li>冷作与热作；32. 加工硬化/回复/再结晶；33. 自由锻与模锻；34. 轧制原理与孔型；35. 挤压分类；36. 焊接分类；37. 钎焊与熔焊；38. 焊接缺陷；39. 焊接应力与变形；40. 热影响区分区。</li>
+</ol>
+<hr>
+<blockquote><strong>使用建议</strong>：先读本手册建立框架（1~2 小时），再用 <code>材料导论刷题工具.html</code> 的「总体刷题」摸底，最后按错题本回炉；简答题与综合分析用「背答案版」自评，标为「不会」的题重点抄写一遍。</blockquote>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>材料导论 · 复习中心</title>
+<style>
+:root{--ink:#1b2432;--sub:#5d6b80;--line:#e3e8f0;--brand:#2f6df6;--ok:#12a150;--warn:#f0a020;--bg:#f4f6fb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);min-height:100vh;
+ font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+ display:flex;align-items:center;justify-content:center;padding:24px}
+.box{width:100%;max-width:760px}
+h1{font-size:27px;margin:0 0 6px;letter-spacing:.5px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+a.card{display:block;background:#fff;border-radius:16px;padding:20px;
+ box-shadow:0 1px 2px rgba(20,40,80,.05),0 8px 24px rgba(20,40,80,.06);
+ text-decoration:none;color:inherit;transition:transform .12s,box-shadow .12s}
+a.card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(20,40,80,.13)}
+.icon{font-size:22px;display:block;margin-bottom:8px}
+h2{font-size:17px;margin:0 0 6px}
+p{margin:0;font-size:12.8px;color:var(--sub);line-height:1.6}
+.tag{display:inline-block;margin-top:10px;font-size:12px;padding:2px 9px;border-radius:999px;
+ background:#e8f0ff;color:var(--brand);font-weight:600}
+.tag.g{background:#e6f4ea;color:var(--ok)}
+.meta{margin-top:18px;font-size:12.5px;color:var(--sub);text-align:center}
+@media(max-width:560px){.grid{grid-template-columns:1fr}h1{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>材料导论 · 复习中心</h1>
+  <div class="sub">《新材料与加工技术导论》期末复习 · 天津大学材料学院</div>
+  <div class="grid">
+    <a class="card" href="quiz.html">
+      <span class="icon">✍️</span>
+      <h2>刷题工具</h2>
+      <p>232 道题：总体刷题 + 选择题 / 判断题 / 简答题 / 综合分析四个单项，含错题本与背答案版。</p>
+      <span class="tag">96 选择 · 80 判断 · 40 简答 · 16 综合</span>
+    </a>
+    <a class="card" href="notes.html">
+      <span class="icon">📘</span>
+      <h2>知识点手册</h2>
+      <p>八章考点整理，22 张对比表格，附数字速记、易混对照、答题模板与背诵索引，可直接打印。</p>
+      <span class="tag g">可打印 / 存 PDF</span>
+    </a>
+  </div>
+  <div class="meta">进度保存在本机浏览器 · 断网可用</div>
+</div>
+</body>
+</html>
